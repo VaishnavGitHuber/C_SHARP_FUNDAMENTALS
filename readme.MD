@@ -6,6 +6,12 @@ This repository provides a concise guide to C# programming, covering fundamental
 2. [Datatypes in C#](#2-datatypes-in-c)
 3. [Working With Strings](#3-working-with-strings)
 4. [Working with Numbers](#4-working-with-numbers)
+5. [Getting input from user](#5-Getting-input-from-user)
+6. [TASK1: Building a Sinmple Calculator](#6-Building-a-simple-calculator)
+7. [TASK2: Building a MindLibGame](#7-Building-a-MindLibGame)
+8. [Functions in c#](#8-Functions-in-CSHARP)
+9. [Condition Statments in c#](#9-Condition-statements-in-csharp)
+10. [Iteration Statments in C Sharp](#10-Iteration-Statments-in-C-Sharp)
 
 ## 1. Variables in C#
 Variables in c# must be declared with a specific data type before use. Here's an example:
@@ -80,5 +86,115 @@ Variables in c# must be declared with a specific data type before use. Here's an
     Console.WriteLine(Math.Min(34, 78));
     Console.WriteLine(Math.Round(21.76));
 
+```
+## 5. Getting input from user
+```
+5. Getting input from the user 
+    5.1 Console.ReadLine() <- return input as string, doesnot have parameter 
+    5.2 Console.Read() <- return input as integer of ascii 
 
+    Console.Write("Enter your name: ");
+    name = Console.ReadLine();
+    Console.Write("Enter your age: ");
+    age = Console.ReadLine();
+    Console.WriteLine("Your name is: " + name + " you are " + age);
+```
+## 6. Building a simple calculator
+```
+double num1, num2, result;
+        Console.Write("Enter the first Number: ");
+        num1 = Convert.ToDouble(Console.ReadLine());
+        Console.Write("Enter the Second Number: ");
+        num2 = Convert.ToDouble(Console.ReadLine());
+        result = num1 + num2;
+
+        Console.WriteLine("Result is: " + Math.Round(result));
+```
+## 7. Building a MindLibGame
+```
+        string color, pleural_noun, celebraty;
+
+        Console.Write("Enter your color: ");
+        color = Console.ReadLine();
+        Console.Write("Enter your pleural_noun: ");
+        pleural_noun = Console.ReadLine();
+        Console.Write("Enter your celebraty: ");
+        celebraty = Console.ReadLine();
+
+        Console.WriteLine("Roses are " + color);
+        Console.WriteLine(pleural_noun + " are blue");
+        Console.WriteLine("I Love " + celebraty);
+```
+
+## 8. Functions in CSHARP
+```
+Functions in C# : block of code that can be reused again and again 
+    8.1 Function with parameter and with return value 
+    8.2 Function with parameter and without return value 
+    8.3 Function without parameter and with return value 
+    8.4 Function without parameter and without return value 
+
+    syntax: 
+    static return_type function_name(data_type parameter1,...)
+    {
+        // block of code
+    }
+```
+## 9 Condition statements in csharp
+```
+9.1 Simple If block
+    9.2 If-Else block
+    9.3 Else-If Ladder block
+    9.4 Switch Statement 
+
+    syntax for if-else:
+    if(condition)
+    {
+        // if block
+    }
+    else if(condition)
+    {
+        // else if block
+    }
+    else 
+    {
+        // else block
+    }
+
+    syntax for switch 
+    switch(choice_variable)
+    {
+        case 1:
+            // case1 block 
+        case 2:
+            // case2 block 
+        .
+        .
+        default: 
+            // default block 
+    }
+```
+## 10. Iteration Statments in C Sharp
+```
+10.1 While Loop
+    10.2 Do-While Loop
+    10.3 ForLoop
+
+    syntax for while loop: Iteration is continued untill the condition is true
+    while(condition) 
+    {
+        // block of code
+    }
+
+    syntax for do-while loop: Iteration is continued untill the condition is true
+    do
+    {
+        // block of code
+    }while(condition) 
+
+    syntax for forloop: Iteration is continued untill the condition is true
+    for(initialisation; condition; increment/decrement)
+    {
+        // block of code 
+    }
 ```

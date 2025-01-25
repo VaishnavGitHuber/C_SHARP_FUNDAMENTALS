@@ -12,3 +12,4 @@
 /Users/vyshnavkrishna/Desktop/C_SHARP_FUNDAMENTALS/obj/Debug/net9.0/C_SHARP_FUNDAMENTALS.pdb
 /Users/vyshnavkrishna/Desktop/C_SHARP_FUNDAMENTALS/obj/Debug/net9.0/C_SHARP_FUNDAMENTALS.genruntimeconfig.cache
 /Users/vyshnavkrishna/Desktop/C_SHARP_FUNDAMENTALS/obj/Debug/net9.0/ref/C_SHARP_FUNDAMENTALS.dll
+/Users/vyshnavkrishna/Desktop/C_SHARP_FUNDAMENTALS/obj/Debug/net9.0/C_SHARP_FUNDAMENTALS.sourcelink.json
