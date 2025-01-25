@@ -2,10 +2,10 @@
 This repository provides a concise guide to C# programming, covering fundamental concepts with examples. Each concept is explained with well-commented code for ease of understanding.
 
 ## Table of Contents
-1. [Variable Declaration and Initialization](#1.Variables-in-C#)
-2. [Datatypes in c#](#2.Datatypes-in-c#)
-3. [Working With Strings](#3.working-with-strings)
-4. [Working with Numbers](#4.working-with-numbers)
+1. [Variable Declaration and Initialization](#1-variables-in-c)
+2. [Datatypes in C#](#2-datatypes-in-c)
+3. [Working With Strings](#3-working-with-strings)
+4. [Working with Numbers](#4-working-with-numbers)
 
 ## 1. Variables in C#
 Variables in c# must be declared with a specific data type before use. Here's an example:
@@ -19,7 +19,7 @@ Variables in c# must be declared with a specific data type before use. Here's an
         int age = 18; // declaration and initialisation
 ```
 
-## 2. Datatypes in c#
+## 2. Datatypes in C#
 ```
 2. Data types: It tells the types of the data that can be stored in the PL
     2.1 String : to store collection of charectors 
@@ -38,7 +38,7 @@ Variables in c# must be declared with a specific data type before use. Here's an
         bool is_vaild = true;
 ```
 
-## 3. Working With Strings
+## 3. Working with Strings
 ```
 3. Working with strings 
     3.1 .Length : to get the number of charectors in the string 
@@ -61,7 +61,7 @@ Variables in c# must be declared with a specific data type before use. Here's an
     Console.WriteLine(text.IndexOf("Amazing")); // return index position
     Console.WriteLine(text.Substring(8, 5)); // return substring
 ```
-## 4. Working With Numbers
+## 4. Working with Numbers
 ```
 4. Working with numbers 
     int * int -> int, int * float -> float, float * float -> float
