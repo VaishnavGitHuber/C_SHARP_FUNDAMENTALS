@@ -2,10 +2,10 @@
 This repository provides a concise guide to C# programming, covering fundamental concepts with examples. Each concept is explained with well-commented code for ease of understanding.
 
 ## Table of Contents
-1. [Variable Declaration and Initialization](# 1.-Variables-in-C#)
-2. [Datatypes in c#](# 2.-Datatypes-in-c#)
-3. [Working With Strings](# 3.-working-with-strings)
-4. [Working with Numbers](# 4.-working-with-numbers)
+1. [Variable Declaration and Initialization](#1.Variables-in-C#)
+2. [Datatypes in c#](#2.Datatypes-in-c#)
+3. [Working With Strings](#3.working-with-strings)
+4. [Working with Numbers](#4.working-with-numbers)
 
 ## 1. Variables in C#
 Variables in c# must be declared with a specific data type before use. Here's an example:
