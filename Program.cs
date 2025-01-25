@@ -104,12 +104,38 @@
     {
         // block of code 
     }
-
+11. Building Better Calculator
+12. Cube Function 
+13. Get Maximum of 3 numbers
+14. Arrays in C# : Used to stored multiple values 
+    14.1 declaration of Arrays 
+    datatype[] array_name = {value1, value2, value3, ...};
+    or 
+    datatype array_name = new datatype[size];
+    array_name[index] = value;
 */
 class HelloWorld
 {
     static void Main(string[] args)
     {
+        int[] numbers = { 3, 4, 5, 6 };
+        string[] colors = new string[4];
+        colors[0] = "red";
+        colors[1] = "pink";
+        colors[2] = "blue";
+        colors[3] = "violet";
 
+        for (int index = 0; index < colors.Length; index++)
+        {
+            Console.Write(colors[index] + " ");
+        }
+        Console.WriteLine();
+
+        for (int index = 0; index < numbers.Length; index++)
+        {
+            Console.Write(numbers[index] + " ");
+        }
+        Console.WriteLine();
     }
+
 }

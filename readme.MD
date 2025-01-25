@@ -12,6 +12,10 @@ This repository provides a concise guide to C# programming, covering fundamental
 8. [Functions in c#](#8-Functions-in-CSHARP)
 9. [Condition Statments in c#](#9-Condition-statements-in-csharp)
 10. [Iteration Statments in C Sharp](#10-Iteration-Statments-in-C-Sharp)
+11. [Task3: Better Calculator](#11-Building-better-calculator)
+12. [Task4: Cube Function](#12-Cube-Function)
+13. [Task5; Maximum of 3 Numbers](#13-Get-maximum-of3)
+14. [Arrays in C #](#14-Arrays-in-Csharp)
 
 ## 1. Variables in C#
 Variables in c# must be declared with a specific data type before use. Here's an example:
@@ -142,7 +146,7 @@ Functions in C# : block of code that can be reused again and again
 ```
 ## 9 Condition statements in csharp
 ```
-9.1 Simple If block
+    9.1 Simple If block
     9.2 If-Else block
     9.3 Else-If Ladder block
     9.4 Switch Statement 
@@ -176,7 +180,7 @@ Functions in C# : block of code that can be reused again and again
 ```
 ## 10. Iteration Statments in C Sharp
 ```
-10.1 While Loop
+    10.1 While Loop
     10.2 Do-While Loop
     10.3 ForLoop
 
@@ -197,4 +201,106 @@ Functions in C# : block of code that can be reused again and again
     {
         // block of code 
     }
+```
+## 11. Building better calculator
+```
+        double num1, num2, result = 0;
+        string oper;
+
+        Console.Write("Enter first number: ");
+        num1 = Convert.ToDouble(Console.ReadLine());
+        Console.Write("Enter a operator: ");
+        oper = Console.ReadLine();
+        Console.Write("Enter second number: ");
+        num2 = Convert.ToDouble(Console.ReadLine());
+
+        if (oper == "+")
+        {
+            result = num1 + num2;
+        }
+        else if (oper == "-")
+        {
+            result = num1 - num2;
+        }
+        else if (oper == "*")
+        {
+            result = num1 * num2;
+        }
+        else if (oper == "/")
+        {
+            result = num1 / num2;
+        }
+        else
+        {
+            Console.WriteLine("Enter a valid operator");
+        }
+
+        Console.WriteLine("Result is: " + result);
+```
+## 12. Cube Function
+```
+    static void Main(string[] args)
+    {
+        int Num = 5, CubeValue;
+        // cube function 
+        CubeValue = GetCube(Num); // function call
+        Console.WriteLine("Cube of " + Num + " is " + CubeValue);
+
+    }
+
+    // function declaration
+    static int GetCube(int number)
+    {
+        int output;
+        output = number * number * number;
+        return output; // return statment
+    }
+```
+## 13. Get maximum of3
+```
+    static void Main(string[] args)
+    {
+        int num1 = 23, num2 = 67, num3 = 75, greatestNumber;
+        greatestNumber = num1;
+
+        greatestNumber = GetMaxOf3(num1, num2, num3);
+        Console.WriteLine("Greatest number: " + greatestNumber);
+    }
+
+    static int GetMaxOf3(int num1, int num2, int num3)
+    {
+        int greatest = num1;
+
+        if (num1 > num2 && num1 > num3)
+        {
+            greatest = num1;
+        }
+        else if (num2 > num3 && num2 > num1)
+        {
+            greatest = num2;
+        }
+        else if (num3 > num1 && num3 > num2)
+        {
+            greatest = num3;
+        }
+
+        return greatest;
+    }
+```
+## 14. Arrays in Csharp
+```
+14. Arrays in C# : Used to stored multiple values 
+    14.1 declaration of Arrays 
+    datatype[] array_name = {value1, value2, value3, ...};
+    or 
+    datatype array_name = new datatype[size];
+    array_name[index] = value;
+
+        int[] numbers = { 3, 4, 5, 6 };
+        string[] colors = new string[4];
+        colors[0] = "red";
+        colors[1] = "pink";
+        colors[2] = "blue";
+        colors[3] = "violet";
+
 ```
