@@ -1,5 +1,6 @@
 ### This repository conatain C# Learning materials in ordered way.
 This repository provides a concise guide to C# programming, covering fundamental concepts with examples. Each concept is explained with well-commented code for ease of understanding.
+### Thankyou so much Giraffe accademy and MadTargerson for helping me to learn basics of C#
 
 ## Table of Contents
 1. [Variable Declaration and Initialization](#1-variables-in-c)
