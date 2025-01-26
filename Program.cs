@@ -113,29 +113,66 @@
     or 
     datatype array_name = new datatype[size];
     array_name[index] = value;
+15. Building a Guess Game using C# 
+16. 2D Array
+syntax: 
+datatype[,] array_name = { {value1, value2, .... }, {value1,... }, {value1,...}, ...} OR
+datatype[,] array_name = new datatype[n,m]
+17. Exception Handling in c-sharp : Using C# 
+    17.1 Exception : to handle any kind of exception
+    17.2 DivideByZeroDivision : to handle the divide by zero exception
+    17.3 FormatException : to handle the format exception
+18. Class,Objects,Constructor in C#
+19. static class, method, attribute 
+static attribute : attribute shared by all the intances of class 
+syntax
+static attribute_name 
+
+static method: method that can be called which out created objects 
+syntax:
+static method_name(arg1, arg2, ...){ ... }
+
+static class: class that cannot be initiated, such classes cannot create objects
+static class class_name { ... }
+20. Getters and setters : used to get and set the prvate attributes 
+which are not accessable outside the class
+syntax:
+public datatype attributeName 
+{ 
+get { return attributename }
+set { attributeName = value }
+}
+21. Inheritance: creating a class from the existing class 
+syntax: 
+newClassname : existingClassName { // attribute,method,constructor }
 */
 class HelloWorld
 {
     static void Main(string[] args)
     {
-        int[] numbers = { 3, 4, 5, 6 };
-        string[] colors = new string[4];
-        colors[0] = "red";
-        colors[1] = "pink";
-        colors[2] = "blue";
-        colors[3] = "violet";
-
-        for (int index = 0; index < colors.Length; index++)
-        {
-            Console.Write(colors[index] + " ");
-        }
-        Console.WriteLine();
-
-        for (int index = 0; index < numbers.Length; index++)
-        {
-            Console.Write(numbers[index] + " ");
-        }
-        Console.WriteLine();
+        NewHuman human = new NewHuman();
+        Human Oldman = new Human();
+        Oldman.GetProperties();
+        human.GetProperties();
     }
+}
 
+class Human
+{
+    public int noOfLeg = 2, noHands = 2;
+    public bool canSpeak = true;
+
+    public virtual void GetProperties()
+    {
+        Console.WriteLine("Human can speak, eat, and walk");
+    }
+}
+
+class NewHuman : Human
+{
+    public bool canWalk = true;
+    public override void GetProperties()
+    {
+        Console.WriteLine("Human can speak, eat, walk, dance and, sing");
+    }
 }

@@ -16,6 +16,13 @@ This repository provides a concise guide to C# programming, covering fundamental
 12. [Task4: Cube Function](#12-Cube-Function)
 13. [Task5; Maximum of 3 Numbers](#13-Get-maximum-of3)
 14. [Arrays in C #](#14-Arrays-in-Csharp)
+15. [Word Guess Game](#15-word-guess-game)
+16. [2D Array](#16-2D-Array-in-CSharp)
+17. [Exception Handling](#17-Exception-Handling)
+18. [Class,Objects,Constructor in C#](#18-Class-Objects-Constructor-in-CS)
+19. [Static class, Method, attribute](#19-static-class-object-method)
+20. [Getter and Setter](#20-Getter-and-Setter)
+21. [Inheritance in C Sharp](#21-Inheritance-in-CSharp)
 
 ## 1. Variables in C#
 Variables in c# must be declared with a specific data type before use. Here's an example:
@@ -303,4 +310,245 @@ Functions in C# : block of code that can be reused again and again
         colors[2] = "blue";
         colors[3] = "violet";
 
+```
+## 15. word guess game
+```
+        string guessedWord = "", secretWord = "Apple";
+        int limit = 3, chance = 0;
+        bool isCorrect = false;
+
+        while (guessedWord != secretWord && chance < limit)
+        {
+            Console.Write("Enter your guess" + (limit - chance) + " chance left: ");
+            guessedWord = Console.ReadLine();
+            chance += 1;
+            if (secretWord == guessedWord)
+            {
+                isCorrect = true;
+            }
+        }
+        if (isCorrect)
+        {
+            Console.WriteLine("You Won");
+        }
+        else
+        {
+            Console.WriteLine("You Loss");
+        }
+```
+## 16. 2D Array in CSharp
+```
+16. 2D Array
+syntax: 
+datatype[,] array_name = { {value1, value2, .... }, {value1,... }, {value1,...}, ...} OR
+datatype[,] array_name = new datatype[n,m]
+
+        int[,] array = {
+            {2, 3},
+            {4, 5},
+            {6, 7}
+        };
+        string[,] colors = new string[2, 3];
+        colors[0, 0] = "red";
+        colors[0, 1] = "blue";
+        colors[1, 0] = "pink";
+        colors[1, 1] = "Rose";
+
+        // Accssing the elements in the 2D Array
+        for (int i = 0; i < 2; i++)
+        {
+            for (int j = 0; j < 2; j++)
+            {
+                Console.WriteLine(colors[i, j]);
+            }
+        }
+```
+## 17. Exception Handling
+```
+17. Exception Handling in c-sharp : Using C# 
+    17.1 Exception : to handle any kind of exception
+    17.2 DivideByZeroDivision : to handle the divide by zero exception
+    17.3 FormatException : to handle the format exception 
+
+    try
+        {
+            Console.Write("Enter number1: ");
+            num1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter number2: ");
+            num2 = Convert.ToInt32(Console.ReadLine());
+            result = num1 / num2;
+        }
+        catch (FormatException e)
+        {
+            Console.WriteLine(e.Message);
+        }
+        finally
+        {
+            Console.WriteLine("Excecution completed Sucessfully...");
+        }
+    
+```
+## 18. Class Objects Constructor in CS
+```
+class : template for creating objects
+objects: instance of class 
+constructor: special method exceuted when a class is initiated
+syntax 
+class class_name { // attributes, method, constructor }
+
+class HelloWorld
+{
+    static void Main(string[] args)
+    {
+        Book book1 = new Book("JK Rowlings", "HarryPorter", 340);
+        book1.DisplayInfo();
+    }
+}
+
+public class Book
+{
+    public string author, title;
+    public int noOfPages;
+
+    // constuctor
+    public Book(string aAuthor, string aTitle, int aNoOfPages)
+    {
+        author = aAuthor;
+        title = aTitle;
+        noOfPages = aNoOfPages;
+    }
+
+    public void DisplayInfo()
+    {
+        Console.WriteLine("Title: " + title + " Author: " + author + " No of pages: " + noOfPages);
+    }
+}
+```
+## 19. static class object method
+```
+static attribute : attribute shared by all the intances of class 
+syntax
+static attribute_name 
+
+static method: method that can be called which out created objects 
+syntax:
+static method_name(arg1, arg2, ...){ ... }
+
+static class: class that cannot be initiated, such classes cannot create objects
+static class class_name { ... }
+
+class HelloWorld
+{
+    static void Main(string[] args)
+    {
+        Car car1 = new Car("Swift", "MaruthiSusuki", 4, 20.5F);
+        Car car2 = new Car("A-Class", "Benz", 5, 10.5F);
+        Console.WriteLine(Car.GetObjectsCount());
+    }
+}
+
+
+class Car
+{
+    public string name, model;
+    public float mileage;
+    public int rating;
+    public static int noOfObjects = 0;
+
+    public Car(string aName, string aModel, int aRating, float aMileage)
+    {
+        name = aName;
+        model = aModel;
+        rating = aRating;
+        mileage = aMileage;
+        noOfObjects += 1;
+    }
+
+    public static int GetObjectsCount()
+    {
+        return noOfObjects;
+    }
+
+}
+```
+## 20. Getter and Setter
+```
+20. Getters and setters : used to get and set the prvate attributes 
+which are not accessable outside the class
+syntax:
+public datatype attributeName 
+{ 
+get { return attributename }
+set { attributeName = value }
+}
+
+
+class HelloWorld
+{
+    static void Main(string[] args)
+    {
+        Calculator calculator = new Calculator("CASIO");
+        calculator.BrandName = "MIKE JIO";
+        Console.WriteLine(calculator.BrandName);
+    }
+}
+
+class Calculator
+{
+    private string brandName;
+    public Calculator(string aBrandName)
+    {
+        brandName = aBrandName;
+    }
+
+    public string BrandName
+    {
+        set
+        {
+            brandName = value;
+        }
+        get
+        {
+            return brandName;
+        }
+    }
+
+}
+```
+## 21 Inheritance in CSharp
+```
+21. Inheritance: creating a class from the existing class 
+syntax: 
+newClassname : existingClassName { // attribute,method,constructor }
+
+class HelloWorld
+{
+    static void Main(string[] args)
+    {
+        NewHuman human = new NewHuman();
+        Human Oldman = new Human();
+        Oldman.GetProperties();
+        human.GetProperties();
+    }
+}
+
+class Human
+{
+    public int noOfLeg = 2, noHands = 2;
+    public bool canSpeak = true;
+
+    public virtual void GetProperties()
+    {
+        Console.WriteLine("Human can speak, eat, and walk");
+    }
+}
+
+class NewHuman : Human
+{
+    public bool canWalk = true;
+    public override void GetProperties()
+    {
+        Console.WriteLine("Human can speak, eat, walk, dance and, sing");
+    }
+}
 ```
